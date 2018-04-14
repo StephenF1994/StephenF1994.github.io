@@ -3,24 +3,28 @@
 body{
 		 
 		color: #197278
-		font-size: 100%;
+		font-size: 10%;
 		line-height: 1.5em;
 		margin: 0;
 		background-color: white;
+		font-family: arial;
 
 	}
 
+
+
 h1, h2, h3{
-		color: #ff3535;
-		font-family: 'Yanone Kaffeesatz ', sans-serif;
-		font-size: 150%;
+		
+		font-family: myFont;
+			color: #ff3535;
 		text-align: center;
 		padding-top: 0;
 	}
 
+	
 h2{
 		
-		font-size: 200%;
+		font-size: 500%;
 	}
 
 h3{
@@ -41,7 +45,7 @@ li{
 a{
 		text-decoration: none;
 		font-size: 100%;
-		font-family: 'Yanone Kaffeesatz', sans-serif;
+		font-family: myFont;
 		color: #ff3535;
 		margin-top: 50%;
 		transition: 0.3s ease;
@@ -64,7 +68,7 @@ a:hover{
 		text-align: center;
 		position: relative;
 		background-color: #FFFFFF;
-		height: 700PX;
+		height: 800PX;
 
 	}
 
@@ -74,7 +78,14 @@ a:hover{
 		width: 100%;
 	}
 
-	
+#Title{
+	font-size: 3000%;
+	font-family: myFont;
+	position: relative;
+	top: -450px;
+	color: white;
+
+}
 
 
 
@@ -84,7 +95,8 @@ a:hover{
 #Nav{
 		position: fixed;
 			top: 0;
-		background-color: #FFFFFF;
+		background-color: rgba(0 0 0 0);
+		
 		color: #c44536;
 		width: 100%;
 		height:50px;
@@ -99,7 +111,8 @@ a:hover{
 
 .navList{
 		display: inline-block;
-		margin:1.5% 8% 4% 4%;
+		margin-left:14%;
+		margin-top: 1%;
 		font-size: 180%;
 	}
 
@@ -111,7 +124,7 @@ a:hover{
 
 #HistoryHeading {
 		text-align: center;
-		background-color: #edddd4;
+		background-color: #C7FFFB;
 		width: 100%;
 		
 		padding-top:5%;
@@ -127,7 +140,7 @@ a:hover{
 #History{
 	
 	text-align: center;
-	background-color: #edddd4;
+	background-color: #C7FFFB;
 	height: 1100px;
 
 
@@ -215,17 +228,20 @@ a:hover{
 
 
 #membersHeading{
-	margin-top: 5%;
-	margin-bottom: 10%;
-	background-color: white;
+	padding-top: 5%;
+	padding-bottom: 10%;
+	background-color: #FFC7C7;
+	color: #3C3C3C;
 
 }
 
 #Members{								/*Used a grid to display the band member gallery*/
-	background-color: white;
+	background-color: #FFC7C7;
 	display: grid;
 	grid-template-columns:1fr 2fr 1fr 2fr 1fr; /* 2 images are displayed on each row of equal width(2fr) They are seperated with a gutter half their size.(1fr)*/
-	grid-template-rows:450px 450px 450px 450px
+	grid-template-rows:450px 450px 450px 450px;
+	color: #3C3C3C;
+
 
 }
 
@@ -233,22 +249,33 @@ a:hover{
 	position: relative;
 	top: -180px;
 	opacity: 0;
-	transition: 0.5s ease;
+	transition:: ease-in-out 0.5s;
 	font-size: 180%;
 	color:  #0391A1;
 	margin-bottom: 0;
-	font-family: 'Yanone Kaffeesatz', sans-serif;
+	transition: 0.5s ease-in-out;
+	
+}
+
+.text:hover{
+	opacity: 1;
+	transition: 0.5s ease-in-out;
 }
 
 
 .bandImage{
-	width: 350PX;						/*Images were edited and resized in Photoshop but also set width in css.*/
+	width: 350PX;
+	transition: 0.5s ease-in-out;
+
+						/*Images were edited and resized in Photoshop but also set width in css.*/
 }
 
 
 .memberInfo{
 	position: relative;
 	top: -20px;
+	color: #3C3C3C;
+
 
 }
 
@@ -301,8 +328,9 @@ text-align: center;
 /* Gallery discography of albums released by Oasis.*/
 
 #Discography-Container{
-		background-color: #edddd4;
+		background-color: #C7FFDA;
 		padding: 5%;
+		color: #FF5041;
 	}
 
 
@@ -310,7 +338,7 @@ text-align: center;
 	padding-top: 5%;
 	width: 100%;
 	font-size: 90%;
-	background-color: #edddd4;
+	background-color: #C7FFDA;
 	display: grid;
 	grid-template-columns:1fr 2fr 2fr 2fr 1fr ;
 	grid-template-rows:480px 480px 480px;
@@ -362,15 +390,18 @@ text-align: center;
 
 
 
+.albumBlock{
+	margin-bottom: 5%;
+	padding-top: 2%;
+		transition: ease-in-out 0.3s;
+
+}
 
 
-.albumBlock:hover .albumImage{
 
-	width: 100%;
-	height: 300px; 
+.albumBlock:hover{
+	background-color: #91DEB2;
 	
-	transition: 0.7s ease-in-out;
-
 }
 
 
@@ -378,7 +409,7 @@ text-align: center;
 .albumImage {						/* Class for displaying the album covers*/					
 	width: 70%;
 	height: 200px;
-	transition: 0.5s ease-in-out;
+	
 	margin-top: 1%;
 	margin-bottom: 2%;
 }
@@ -419,39 +450,35 @@ text-align: center;
 
 }
 
-.albumBlock:hover .albumButton{
-	display: block;
-	text-align: center;
-	margin: auto;
-
-}
 
 .albumButton{
 	display: block;
 	margin: 0 auto;
-	background-color: #197278;
-	-moz-border-radius:28px;
-	-webkit-border-radius:28px;
-	border-radius:28px;
-	border:1px solid #18ab29;
+	background-color:#ff3535;;
+
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px;
+	
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
+			
+
+	font-size:100%;
+	padding:10px 20px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #197278;
+	text-shadow:0px 0.5px 0px #197278;
 }
 
 
 .albumHideButton{
 	display: block;
 	margin: 0 auto;
-	background-color: #197278;
+	background-color: #FF5041;
 	-moz-border-radius:28px;
 	-webkit-border-radius:28px;
 	border-radius:28px;
-	border:1px solid #18ab29;
+	
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
@@ -554,18 +581,14 @@ text-align: center;
 
 #footer{
 
-	background-color: black;
+	background-color: #3C3C3C;
 	color: white;
 	clear: both;
 	height: 100px;
+	text-align: center;
 }
 
-#footer p{
-	color: white;
-	padding-left: 5%;
-	position: relative;
-	top: 80px;
-}
+
 
 
 
@@ -579,8 +602,8 @@ text-align: center;
 }
 
 #linksParagraph{
-	margin-top: 2%;
-	margin-bottom: 2%;
+	margin-top: 10%;
+	margin-bottom: 10%;
 	text-align: center;
 }
  #Links h3{
@@ -603,3 +626,21 @@ text-align: center;
  	margin-top: 15%;
 
  }
+ #name{
+ 	color: white;
+ }
+ #year{
+ 	display: block;
+ }
+
+ #did{
+ 	margin-top: 2%;
+ 	color: #C7FFFB;
+ }
+
+
+    @font-face {
+       font-family: myFont;
+       src: url('BebasNeue Bold.ttf');
+       
+   }
